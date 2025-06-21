@@ -1,0 +1,20 @@
+h1{
+    color:rgba(162, 130, 221, 0.637);
+}
+h1:hover{
+    font-size: 50px;
+    background-color:background: #353eac;
+background: linear-gradient(90deg,#353eac 0%, #a500ff 80%);
+background: -webkit-linear-gradient(90deg,#353eac 0%, #a500ff 80%);
+background: -moz-linear-gradient(90deg,#353eac 0%, #a500ff 80%);;
+    color: crimson;
+}
+img{
+    border:solid +gb(62, 43, 170) 5px;
+    border-radius: border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+border: 5px solid #5e9c4f;
+    width: 300px;
+
+}
