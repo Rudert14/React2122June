@@ -60,4 +60,5 @@ body::before {
 h1 {
     color: #8be9fd; /* Light blue/cyan for headings */
     margin-bottom: 25px;
-    text-shadow: 0
+    text-shadow: 0;
+}
