@@ -1,0 +1,63 @@
+/* General Styling for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    background: #1a1a2e; /* Deep dark blue background as a base */
+    color: #e0e0e0; /* Light text color for contrast */
+    overflow: hidden; /* Hide overflow from animated background */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+/* Color Scattering Background Effect */
+/* This creates dynamic, glowing color blobs that move around */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Use multiple radial gradients for the 'scattered' colored light effect */
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 0, 150, 0.3) 0%, transparent 50%), /* Pink */
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 50%), /* Cyan */
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.2) 0%, transparent 60%), /* Yellow */
+        radial-gradient(circle at 10% 10%, rgba(100, 255, 100, 0.2) 0%, transparent 50%), /* Green */
+        radial-gradient(circle at 90% 90%, rgba(200, 100, 255, 0.2) 0%, transparent 50%); /* Purple */
+    background-size: 300% 300%; /* Make gradients much larger than viewport for movement */
+    animation: scatterColors 15s linear infinite alternate; /* Animate background position */
+    z-index: 0; /* Place behind the main content */
+}
+
+@keyframes scatterColors {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 0%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Main Container for the BMI Calculator (assuming it's rendered inside a div with id="root") */
+#root {
+    background: rgba(255, 255, 255, 0.08); /* Slightly transparent white for a frosted look */
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6); /* Stronger shadow for depth */
+    text-align: center;
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+    position: relative;
+    z-index: 1; /* Ensure content is above the animated background */
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Headings */
+h1 {
+    color: #8be9fd; /* Light blue/cyan for headings */
+    margin-bottom: 25px;
+    text-shadow: 0
